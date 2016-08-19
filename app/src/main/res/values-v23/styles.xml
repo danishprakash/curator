@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/LcolorPrimary</item>
+        <item name="colorPrimaryDark">@color/LcolorPrimaryDark</item>
+        <item name="colorAccent">@color/LcolorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/LcolorAccent</item>
+    </style>
+
+    <style name="CuratorDark" parent="@android:style/Theme.Material">
+        <item name="colorPrimary">@color/DcolorPrimary</item>
+        <item name="colorPrimaryDark">@color/DcolorPrimaryDark</item>
+        <item name="colorAccent">@color/DcolorAccent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+
+</resources>
