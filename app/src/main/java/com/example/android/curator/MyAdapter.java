@@ -17,6 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -42,7 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.myViewHolder> {
         TextView description;
         private Context context;
 
-        public myViewHolder(final View view, Context context) {
+        public myViewHolder(final View view, final Context context) {
             super(view);
             headline = (TextView) view.findViewById(R.id.headline_view);
             description = (TextView) view.findViewById(R.id.description_view);
@@ -53,8 +54,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.myViewHolder> {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(newsListA.get(getAdapterPosition()).getLink()));
+                    Intent i = new Intent(context, readerView.class);
+                    i.putExtra("articleURL", newsListA.get(getAdapterPosition()).getLink());
                     view.getContext().startActivity(i);
                 }
             });
